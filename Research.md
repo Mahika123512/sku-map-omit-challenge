@@ -55,7 +55,7 @@ Map: Some Map SKUs are extremely frequent, necessitating a cap on per-SKU sample
 
 ### 4. **Per-SKU Sampling and Class Balancing**
 
-- **Map records:** For each composite key, sampled up to N=10 per SKU to avoid bias from "hot" SKUs.
+- **Map records:** For each composite key, sampled up to N=2 per SKU to avoid bias from "hot" SKUs.
 - **Omit records:** By nature, most are singletons; always took one per key.
 - Analysis revealed per-key capping produces a dataset where **>70% of Map and >75% of Omit SKUs appear only once**—maximizing product coverage.
 
