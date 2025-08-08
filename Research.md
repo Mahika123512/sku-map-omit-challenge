@@ -27,14 +27,8 @@ Below is a visual overview of the key processes and decision points in our Map/O
 
 ***
 
-### 2. **Composite Key Engineering**
 
-- Created composite keys from `SourceMasterBrand`, `SourceBrand`, `SourceSubBrand`, `SourceCategory`, `SourceSubcategory`, and first 100 characters of `SourceDescription` for both Map and Omit.
-- This sharply increased **SKU diversity**: most Map and Omit "composite keys" now had exactly one or two rows (long-tail distribution).
-
-***
-
-### 3. **Visualization of SKU Distribution**
+### 2. **Visualization of SKU Distribution**
 
 - To visualize the data skew and justify our sampling/deduplication strategy, we plotted the SKU example count distribution for both classes:
 
@@ -51,6 +45,12 @@ Omit: Almost all Omit composite keys are unique or appear once, prompting a 1-pe
 
 Map: Some Map SKUs are extremely frequent, necessitating a cap on per-SKU samples to ensure equitable model learning.
 
+
+***
+### 3. **Composite Key Engineering**
+
+- Created composite keys from `SourceMasterBrand`, `SourceBrand`, `SourceSubBrand`, `SourceCategory`, `SourceSubcategory`, and first 100 characters of `SourceDescription` for both Map and Omit.
+- This sharply increased **SKU diversity**: most Map and Omit "composite keys" now had exactly one or two rows (long-tail distribution).
 
 ***
 
