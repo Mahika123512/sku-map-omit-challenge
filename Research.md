@@ -32,11 +32,11 @@ Below is a visual overview of the key processes and decision points in our Map/O
 
 - To visualize the data skew and justify our sampling/deduplication strategy, we plotted the SKU example count distribution for both classes:
 
-#### Example Omit SKU Count Distribution:
+#### Example Map SKU Count Distribution:
 <img width="902" height="576" alt="image" src="https://github.com/user-attachments/assets/cada5519-576d-49e0-8ed5-9d163a5a3f3a" />
 
 
-#### Example Map SKU Count Distribution:
+#### Example Omit SKU Count Distribution:
 <img width="582" height="377" alt="image" src="https://github.com/user-attachments/assets/65b96036-df8a-45a9-885f-5d4945683431" />
 
 Key Insights:
