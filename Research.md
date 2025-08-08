@@ -11,7 +11,12 @@ This folder presents the **full research journey, data engineering rationale, mo
 The core aim was to **classify incoming vendor SKUs as either "Map" (add to catalog) or "Omit" (exclude)**—using only product-side source data. This demanded methods for deduplication, robust sampling, model fairness, and true production alignment.
 
 ***
+🔄 Pipeline Flowchart
+Below is a visual overview of the key processes and decision points in our Map/Omit pipeline, including all data engineering, sampling, modeling, and reporting steps:
 
+<img width="530" height="797" alt="image" src="https://github.com/user-attachments/assets/248f7311-4579-4d2e-9f5e-51239c3740c0" />
+
+***
 ## 🔬 Research Process & Key Insights
 
 ### 1. **Data Audit & Initial Problem Diagnosis**
@@ -31,16 +36,21 @@ The core aim was to **classify incoming vendor SKUs as either "Map" (add to cata
 
 ### 3. **Visualization of SKU Distribution**
 
-- Produced histograms to understand the number of records per SKU for Map and Omit.
+- To visualize the data skew and justify our sampling/deduplication strategy, we plotted the SKU example count distribution for both classes:
 
-#### Example Omit Distribution Histogram:
-
-
-
-#### Example Map Distribution Histogram:
+#### Example Omit SKU Count Distribution:
+<img width="902" height="576" alt="image" src="https://github.com/user-attachments/assets/cada5519-576d-49e0-8ed5-9d163a5a3f3a" />
 
 
-- These clearly visualized the **extreme imbalance and duplicate distribution** issues that required fair sampling.
+#### Example Map SKU Count Distribution:
+<img width="582" height="377" alt="image" src="https://github.com/user-attachments/assets/65b96036-df8a-45a9-885f-5d4945683431" />
+
+Key Insights:
+
+Omit: Almost all Omit composite keys are unique or appear once, prompting a 1-per-key sampling approach.
+
+Map: Some Map SKUs are extremely frequent, necessitating a cap on per-SKU samples to ensure equitable model learning.
+
 
 ***
 
