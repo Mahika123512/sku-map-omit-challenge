@@ -96,6 +96,28 @@ Map: Some Map SKUs are extremely frequent, necessitating a cap on per-SKU sample
   - `ConfidenceOmit` (probability of Omit)
   - `ActualResult`
   - `IsCorrect` (prediction match)
+ 
+  - <img width="1341" height="626" alt="image" src="https://github.com/user-attachments/assets/1670f472-4983-416d-9f62-a2404de7736c" />
+
+**Interpretation:**
+
+Map: Very high precision (93%)—of all “Map” predictions, 93% were true Map. 89% recall—found 89% of the actual Map SKUs.
+
+Omit: 85% precision (Omit predictions are slightly less reliable), but 90% recall—caught most of the actual Omit cases.
+
+Overall accuracy: 89%—almost 9/10 of all predictions (Map and Omit combined) are correct on this sample.
+
+**Confusion Matrix:**
+
+Rows: true class (Map, Omit). Columns: predicted class (Map, Omit).
+
+Top left (36,792): True Map, predicted as Map (correct).
+
+Top right (4,433): True Map, but predicted as Omit (mistake).
+
+Bottom left (2,841): True Omit, predicted as Map (mistake).
+
+Bottom right (24,643): True Omit, predicted as Omit (correct).
 
 ***
 
