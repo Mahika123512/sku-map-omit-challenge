@@ -26,8 +26,8 @@ The goal of this challenge is to **accurately classify vendor product SKUs as â€
 
 | S.No | Approach Description                                | Link to Details & Results                   |
 |------|----------------------------------------------------|---------------------------------------------|
-| 1    | Composite Key Sampling, Stratified Map/Omit Balance | [CompositeKey_Balanced_Runs/README.md](CompositeKey_Balanced_Runs/README.md) |
-| 2    | Baseline BERT Embedding + Logistic Regression       | [BERT_Baseline_Results/README.md](BERT_Baseline_Results/README.md)           |
+| 1    | Composite Key Sampling, Stratified Map/Omit Balance | [CompositeKey_Balanced_Runs/Research.md](CompositeKey_Balanced_Runs/Research.md) |
+
 
 > ğŸ“ Further experiments and evaluations will be added as our pipeline matures.
 
